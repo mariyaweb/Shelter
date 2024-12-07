@@ -1,0 +1,838 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../shelter/assets/fonts/Georgia.woff2") format "woff2", url("../../shelter/assets/fonts/Georgia.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../shelter/assets/fonts/Georgia.woff") format "woff", url("../../shelter/assets/fonts/Georgia.woff2") format "woff2";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../shelter/assets/fonts/Georgia.ttf") format "truetype", url("../../shelter/assets/fonts/Georgia.ttf") format "truetype";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+.logo__title a {
+  font-family: "Georgia", serif;
+}
+
+.btn {
+  font-family: "Georgia";
+  font-size: 1.7rem;
+  line-height: 130%;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border-radius: 100px;
+  padding: 1.5rem 4.5rem;
+  background-color: #FAFAFA;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.btn-bordered {
+  border: 2px solid #F1CDB3;
+}
+.btn-bordered:hover {
+  background-color: #FDDCC4;
+}
+.btn-solid {
+  background-color: #F1CDB3;
+}
+.btn-solid:hover {
+  background-color: #FDDCC4;
+}
+
+@media (max-width: 460px) {
+  .btn {
+    letter-spacing: 0.08rem;
+  }
+}
+.btn-bordered {
+  border: 2px solid #F1CDB3;
+}
+
+.btn-solid {
+  background-color: #F1CDB3;
+}
+
+.slider__arrow {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slider__arrow:hover {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+  transition: all 0.5s;
+}
+
+.header__lite {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+@media (max-width: 1200px) {
+  .header__lite {
+    margin-bottom: 5.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__lite {
+    margin-bottom: 2.9rem;
+  }
+}
+@media (max-width: 320px) {
+  .header__lite {
+    max-width: 28rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+  }
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0 0 0;
+}
+
+.logo__title a {
+  font-family: "Georgia";
+  font-size: 3.2rem;
+  line-height: 3.52rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #545454;
+  letter-spacing: 0.19rem;
+}
+
+.logo__subtitle a {
+  font-size: 1.3rem;
+  line-height: 1.495rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.13rem;
+  color: #292929;
+}
+
+.logo__subtitle {
+  padding: 0.8rem 0 0 0.4rem;
+}
+
+@media (max-width: 767px) {
+  .header__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 32rem;
+    height: 100%;
+    width: 100%;
+    background-color: #292929;
+    transition: all 0.75s ease-in-out;
+    z-index: 2;
+  }
+  .header__navigation.menu-active {
+    right: 0;
+    transition: all 0.75s ease-in-out;
+  }
+}
+.navigation {
+  display: flex;
+  padding: 2.5rem 0.2rem 0 0;
+}
+.navigation__item {
+  margin-right: 3.5rem;
+  color: #545454;
+  font-size: 1.5rem;
+  line-height: 160%;
+  font-style: normal;
+  font-weight: 400;
+}
+.navigation__item:last-child {
+  margin-right: 0rem;
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .navigation__item {
+    margin-right: 0rem;
+    font-size: 32px;
+    margin-bottom: 4rem;
+  }
+  .navigation__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.navigation.menu-active {
+  transition: all 0.5s ease-in-out;
+}
+
+.header__burger {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header__burger {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.2rem;
+    width: 3rem;
+    height: 3rem;
+    z-index: 10;
+    transition: all 0.5s ease-out;
+  }
+}
+.header__line {
+  width: 3rem;
+  height: 0.2rem;
+  margin-bottom: 0.9rem;
+  transition: all 0.5s ease-out;
+}
+.header__line:last-child {
+  margin-bottom: 0;
+}
+
+.lite-burger {
+  background-color: black;
+}
+
+.burger-active {
+  transform: rotate(90deg);
+}
+
+.header__burger.burger-active {
+  margin-right: 0.3rem;
+  transition: all 0.5s ease-out;
+}
+.header__burger.burger-active .lite-burger {
+  background-color: #F1CDB3;
+}
+
+.navigation a {
+  color: #545454;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+@media (max-width: 767px) {
+  .navigation a {
+    color: #CDCDCD;
+  }
+}
+
+.navigation a:hover {
+  color: #292929;
+  transition: all 0.5s ease-out;
+}
+
+.navigation-active {
+  border-bottom: 0.3rem solid #F1CDB3;
+}
+
+.navigation-active a {
+  color: #292929;
+  transition: all 0.5s ease-out;
+}
+@media (max-width: 767px) {
+  .navigation-active a {
+    color: #fff;
+  }
+}
+
+.navigation-active a:hover {
+  cursor: default;
+}
+
+.main__body {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .main__body {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 16.3rem;
+  margin-right: 4.2rem;
+}
+@media (max-width: 1200px) {
+  .main__content {
+    margin: 0 0 10rem 0;
+    padding-top: 0rem;
+  }
+}
+@media (max-width: 768px) {
+  .main__content {
+    max-width: 46rem;
+    padding-top: 0rem;
+    margin: 0 0 10rem 0;
+  }
+  .main__content .btn {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 320px) {
+  .main__content {
+    align-items: center;
+    margin: 5.9rem 0 10.4rem 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main__body {
+    flex-direction: column;
+  }
+  .main__content p {
+    max-width: 100%;
+  }
+  .main__img {
+    display: flex;
+    justify-content: end;
+  }
+}
+@media (max-width: 320px) {
+  .main__content p {
+    text-align: center;
+  }
+}
+
+.main__img img {
+  max-width: 100%;
+  min-width: 26rem;
+}
+@media (max-width: 768px) {
+  .main__img img {
+    padding-left: 14rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main__img img {
+    padding-left: 3.8rem;
+    width: 26rem;
+  }
+}
+.main__text {
+  color: #CDCDCD;
+  font-size: 1.5rem;
+  line-height: 160%;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 46rem;
+  margin-bottom: 4.2rem;
+}
+
+@media (max-width: 767px) {
+  .shadow {
+    box-shadow: 0 0 0 9999px rgba(41, 41, 41, 0.6);
+    animation: opacity linear 0.5s;
+  }
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .body__locked {
+    overflow: hidden;
+  }
+}
+.contacts {
+  background: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), url("../../assets/images/footer-background.jpg") no-repeat center, #211F20;
+  padding: 4rem 0 0rem 0;
+}
+@media (max-width: 768px) {
+  .contacts {
+    padding: 1.5rem 0 0rem 0;
+  }
+}
+
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 980px) {
+  .contacts__info {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .contacts__info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 660px) {
+  .contacts__info {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 320px) {
+  .contacts__info {
+    padding-top: 1.6rem;
+  }
+}
+
+.contacts__items {
+  padding-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 320px) {
+  .contacts__items {
+    padding-top: 0;
+  }
+}
+
+.contacts__online {
+  max-width: 27.9rem;
+}
+@media (max-width: 768px) {
+  .contacts__online {
+    margin-right: 6rem;
+  }
+}
+@media (max-width: 660px) {
+  .contacts__online {
+    padding-top: 0;
+    margin-right: 0;
+  }
+}
+
+.contacts__offline {
+  max-width: 30.2rem;
+}
+@media (max-width: 320px) {
+  .contacts__offline {
+    padding-top: 0.2rem;
+    gap: 4rem;
+    margin-bottom: 1.8rem;
+  }
+}
+
+.item__online {
+  padding-bottom: 4rem;
+}
+@media (max-width: 768px) {
+  .item__online {
+    padding-bottom: 3.9rem;
+  }
+}
+@media (max-width: 320px) {
+  .item__online {
+    justify-content: center;
+  }
+  .item__online .item__online:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.item__offline {
+  padding-bottom: 3.3rem;
+}
+@media (max-width: 768px) {
+  .item__offline {
+    padding-bottom: 3.18rem;
+  }
+}
+@media (max-width: 320px) {
+  .item__offline {
+    padding-bottom: 0rem;
+  }
+}
+
+.contacts__title {
+  color: #fff;
+  letter-spacing: 0.21rem;
+}
+@media (max-width: 660px) {
+  .contacts__title {
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .contacts__title {
+    letter-spacing: 0.16rem;
+  }
+}
+
+.address__title {
+  color: #fff;
+  letter-spacing: 0.21rem;
+}
+@media (max-width: 660px) {
+  .address__title {
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .address__title {
+    max-width: 27rem;
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 0.16rem;
+  }
+}
+
+.contacts__text {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 115%;
+  color: #F1CDB3;
+  letter-spacing: 0.13rem;
+}
+
+.contacts__text a {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 115%;
+  color: #F1CDB3;
+  letter-spacing: 0.13rem;
+}
+
+.contacts__text {
+  display: flex;
+  align-items: center;
+}
+.contacts__text img {
+  padding-right: 1.9rem;
+}
+
+@media (max-width: 768px) {
+  .contacts__img {
+    margin-top: 2.26rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .contacts__img img {
+    max-width: 26rem;
+  }
+}
+
+.our-pets {
+  background-color: #F6F6F6;
+  padding: 8rem 0 10rem 0;
+}
+@media (max-width: 1200px) {
+  .our-pets {
+    padding: 8.1rem 0 7.5rem 0;
+  }
+}
+@media (max-width: 320px) {
+  .our-pets {
+    padding: 4.2rem 0 4rem 0;
+  }
+}
+
+.our-pets__title {
+  max-width: 40rem;
+  text-align: center;
+  margin-bottom: 5.8rem;
+}
+@media (max-width: 768px) {
+  .our-pets__title {
+    margin-bottom: 2.9rem;
+  }
+}
+@media (max-width: 380px) {
+  .our-pets__title {
+    font-size: 2.5rem;
+    line-height: 130%;
+    letter-spacing: 0.12rem;
+    margin-bottom: 4.1rem;
+  }
+}
+
+.our-pets__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .slider__item:nth-child(7) {
+    display: none;
+  }
+  .slider__item:nth-child(8) {
+    display: none;
+  }
+}
+@media (max-width: 639px) {
+  .slider__item:nth-child(4) {
+    display: none;
+  }
+  .slider__item:nth-child(5) {
+    display: none;
+  }
+  .slider__item:nth-child(6) {
+    display: none;
+  }
+}
+.our-pets__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2.7rem;
+}
+@media (max-width: 1200px) {
+  .our-pets__cards {
+    justify-content: center;
+    gap: 2.9rem;
+    column-gap: 4rem;
+    margin-bottom: 3.7rem;
+  }
+}
+@media (max-width: 320px) {
+  .our-pets__cards {
+    margin-bottom: 4rem;
+  }
+}
+
+.slider__item {
+  margin-bottom: 3rem;
+}
+@media (max-width: 1200px) {
+  .slider__item {
+    margin-bottom: 0;
+  }
+}
+
+.item__pet {
+  display: flex;
+  flex-direction: column;
+  background-color: #FAFAFA;
+  border-radius: 0.9rem;
+  align-items: center;
+  transition: all 0.5s;
+}
+.item__pet:last-child {
+  margin-right: 0rem;
+}
+.item__pet .card__element {
+  margin-bottom: 2.9rem;
+}
+.item__pet .item__subtitle {
+  font-family: "Georgia";
+  font-size: 2rem;
+  line-height: 2.3rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #545454;
+  letter-spacing: 0.11rem;
+}
+.item__pet:hover {
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.item__pet:hover .btn__pet {
+  background-color: #FDDCC4;
+}
+
+.paginators__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+}
+@media (max-width: 380px) {
+  .paginators__block {
+    gap: 0.8rem;
+  }
+}
+
+.paginator__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-family: "Georgia";
+  font-size: 2rem;
+  line-height: 2.3rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.11rem;
+}
+
+.paginator-inactive {
+  border: 0.2rem solid #CDCDCD;
+  color: #CDCDCD;
+}
+
+.paginator-active {
+  border: 0.2rem solid #F1CDB3;
+  color: #292929;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.paginator-active:hover {
+  background-color: #FDDCC4;
+  border: 0.2rem solid #FDDCC4;
+}
+
+.paginator__number {
+  background-color: #F1CDB3;
+  border: 0.2rem solid #F1CDB3;
+  color: #292929;
+  cursor: pointer;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1,
+h2 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  color: #545454;
+}
+@media (max-width: 320px) {
+  h1,
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.15rem;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+    padding: 0 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
